@@ -37,3 +37,5 @@ def main():
             print("Total weight is not 713 kilograms. Boxes will be moved to new locations.")
             found_boxes = []
             boxes = initialize_boxes()
+
+    print("Congratulations! All boxes found. The Martians are pleased!")        
