@@ -12,3 +12,11 @@ def move_boxes():
 def check_total_weight():
     total_weight = sum(box["weight"] for box in found_boxes)
     return total_weight == 713
+
+def main():
+    global boxes, found_boxes
+    boxes = initialize_boxes()
+    found_boxes = []
+
+    print("Welcome to the Martian Cargo Recovery Program!")
+    print("Enter the kilometer marks one by one to find the cargo.")
