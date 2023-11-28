@@ -20,3 +20,20 @@ def main():
 
     print("Welcome to the Martian Cargo Recovery Program!")
     print("Enter the kilometer marks one by one to find the cargo.")
+
+    while len(found_boxes) < 3:
+        move_boxes()
+
+        for i in range(3):
+            kilometer = int(input(f"Enter kilometer mark {i + 1}: "))
+            for box in boxes:
+                if box["kilometer"] == kilometer:
+                    print(f"Box found at kilometer {kilometer} with {box['weight']} kilograms.")
+                    found_boxes.append(box)
+                    boxes.remove(box)
+                    break
+
+        if not check_total_weight():
+            print("Total weight is not 713 kilograms. Boxes will be moved to new locations.")
+            found_boxes = []
+            boxes = initialize_boxes()
