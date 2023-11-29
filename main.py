@@ -1,9 +1,9 @@
 import random
-def initialize_boxes():
+def init_boxes():
     return [
-        {"kilometers": random.randint(1, 10), "weight": random.randint(100, 300)},
-        {"kilometers": random.randint(1, 10), "weight": random.randint(100, 300)},
-        {"kilometers": random.randint(1, 10), "weight": random.randint(100, 300)}
+        {"kilometers": random.randint(1, 10), "weight": 250},
+        {"kilometers": random.randint(1, 10), "weight": 300},
+        {"kilometers": random.randint(1, 10), "weight": 163}
     ]
 def move_boxes():
     for box in boxes:
@@ -15,7 +15,7 @@ def check_total_weight():
 
 def main():
     global boxes, found_boxes
-    boxes = initialize_boxes()
+    boxes = init_boxes()
     found_boxes = []
 
     print("Welcome to the Martian Cargo Recovery Program!")
@@ -36,6 +36,9 @@ def main():
         if not check_total_weight():
             print("Total weight is not 713 kilograms. Boxes will be moved to new locations.")
             found_boxes = []
-            boxes = initialize_boxes()
+            boxes = init_boxes()
 
-    print("Congratulations! All boxes found. The Martians are pleased!")        
+    print("Congratulations! All boxes found. The Martians are pleased!")     
+    
+if __name__ == "__main__":
+    main()    
