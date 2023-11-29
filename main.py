@@ -19,7 +19,7 @@ def main():
     found_boxes = []
 
     print("Welcome to the Martian Cargo Recovery Program!")
-    print("Enter the kilometer marks one by one to find the cargo.")
+    print("Enter the kilometer marks to find the cargo.")
 
     while len(found_boxes) < 3:
         move_boxes()
@@ -38,7 +38,7 @@ def main():
             found_boxes = []
             boxes = init_boxes()
 
-    print("Congratulations! All boxes found. The Martians are pleased!")     
+    print("Congratulations! All boxes found!")     
     
 if __name__ == "__main__":
     main()    
